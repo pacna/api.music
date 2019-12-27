@@ -1,16 +1,19 @@
-
+// @nestjs
 import { Module } from '@nestjs/common';
-import { SongsController } from '../controllers/songs.controller';
-import { SongsService } from '../services/songs.service';
-import { SongsProviders } from '../database/database.providers';
-import { DatabaseModule } from '../database/database.module';
+import { MongooseModule } from '@nestjs/mongoose';
+
+// controllers
+import { SongsController } from 'src/controllers/songs.controller';
+
+// services
+import { SongsService } from 'src/services/songs.service';
+
+// schemas
+import { SongsSchema } from 'src/schemas/songs.schema';
 
 @Module({
-  imports: [DatabaseModule],
+  imports: [MongooseModule.forFeature([{name: 'Songs', schema: SongsSchema}])],
   controllers: [SongsController],
-  providers: [
-    SongsService,
-    ...SongsProviders,
-  ],
+  providers: [SongsService],
 })
 export class SongsModule {}

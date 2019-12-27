@@ -1,12 +1,17 @@
 // @nestjs
-import { Injectable, Inject } from '@nestjs/common';
-import { Model } from 'mongoose';
+import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+
+// interfaces
 import { IArtists } from 'src/interfaces/artists.interface';
+
+// other
+import { Model } from 'mongoose';
 
 @Injectable()
 export class ArtistsService {
     constructor(
-        @Inject('Artists')
+        @InjectModel('Artists')
         private readonly artistsModel: Model<IArtists>
     ){}
     

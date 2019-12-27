@@ -1,13 +1,21 @@
 // @nestjs
 import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
 
 // modules
 import { SongsModule } from './modules/songs.module';
 import { ArtistsModule } from './modules/artists.module';
 
+// others
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 @Module({
-    imports: [ ArtistsModule, SongsModule ],
+    imports: [  MongooseModule.forRoot(process.env.DATABASE),
+                ArtistsModule, 
+                SongsModule 
+            ],
     controllers: [],
     providers: [],
 })

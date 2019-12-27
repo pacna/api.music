@@ -1,9 +1,10 @@
 // @nestjs
-import { Injectable, Inject } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
 
 // interfaces
-import { ISongs } from '../interfaces/songs.interface';
-import { IFavorite } from '../interfaces/favorite.interface';
+import { ISongs } from 'src/interfaces/songs.interface';
+import { IFavorite } from 'src/interfaces/favorite.interface';
 
 // others
 import { Model } from 'mongoose';
@@ -11,7 +12,7 @@ import { Model } from 'mongoose';
 @Injectable()
 export class SongsService {
     constructor(
-        @Inject('Songs')
+        @InjectModel('Songs')
         private readonly songsModel: Model<ISongs>
     ){}
   
