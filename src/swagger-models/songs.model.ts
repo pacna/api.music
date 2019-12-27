@@ -1,19 +1,19 @@
-import { ApiProperty } from "@nestjs/swagger";
+import { ApiProperty, ApiPropertyOptional } from "@nestjs/swagger";
 
 export class Songs {
 
     @ApiProperty()
     title: string;
 
-    @ApiProperty()
+    @ApiPropertyOptional()
     artist: string;
 
-    @ApiProperty()
+    @ApiPropertyOptional()
     length: string;
 
     @ApiProperty()
     path: string;
 
-    @ApiProperty()
+    @ApiPropertyOptional()
     favorite: boolean;
 }

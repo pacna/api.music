@@ -1,4 +1,3 @@
-
 import * as mongoose from 'mongoose';
 
 export const SongsSchema = new mongoose.Schema({

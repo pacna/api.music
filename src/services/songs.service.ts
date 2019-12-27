@@ -1,14 +1,17 @@
 // @nestjs
 import { Injectable, Inject } from '@nestjs/common';
+
+// interfaces
 import { ISongs } from '../interfaces/songs.interface';
 import { IFavorite } from '../interfaces/favorite.interface';
-import {IMessage} from '../interfaces/message.interface';
+
+// others
 import { Model } from 'mongoose';
 
 @Injectable()
 export class SongsService {
     constructor(
-        @Inject('SONGS_MODEL')
+        @Inject('Songs')
         private readonly songsModel: Model<ISongs>
     ){}
   
@@ -20,7 +23,7 @@ export class SongsService {
         return await this.songsModel.find({'favorite': true}).exec();
     }
 
-    async updateFavorite(id: string, body: IFavorite): Promise<void | IMessage> {
+    async updateFavorite(id: string, body: IFavorite): Promise<void> {
         return await this.songsModel.updateOne({'_id': id}, {'$set': {'favorite': body.favorite}}).exec()
     }
 }

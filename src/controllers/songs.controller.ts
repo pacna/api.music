@@ -4,11 +4,14 @@ import { ApiTags, ApiResponse, ApiParam, ApiBody } from '@nestjs/swagger';
 
 // services
 import { SongsService } from 'src/services/songs.service';
+
+// interfaces
 import { ISongs } from 'src/interfaces/songs.interface';
 import { IFavorite } from 'src/interfaces/favorite.interface';
+
+// swagger models
 import { Songs } from 'src/swagger-models/songs.model';
 import { Favorite } from 'src/swagger-models/favorite.model';
-import {IMessage } from 'src/interfaces/message.interface'
 import { Message } from 'src/swagger-models/message.model';
 
 @Controller('songs')
@@ -32,7 +35,7 @@ export class SongsController {
     @ApiParam({name: 'id'})
     @ApiBody({type: Favorite})
     @ApiResponse({ status: 200, type: Message})
-    async updateFavorite(@Param('id') id: string, @Body() body: IFavorite): Promise<void | IMessage> {
+    async updateFavorite(@Param('id') id: string, @Body() body: IFavorite): Promise<void> {
         return await this.songsService.updateFavorite(id, body);
     }
 
