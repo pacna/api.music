@@ -8,9 +8,11 @@ import {SongService} from './services/song.service'
 // services
 import { AlbumService } from './services/album.service';
 import { AlbumController } from './controllers/album.controller';
+import { SongsModule } from './modules/songs.module';
+
 
 @Module({
-    imports: [],
+    imports: [SongsModule],
     controllers: [AlbumController, SongController],
     providers: [AlbumService, SongService],
 })

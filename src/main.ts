@@ -1,9 +1,13 @@
 import { NestFactory } from '@nestjs/core';
 import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 async function bootstrap() {
     const app = await NestFactory.create(AppModule);
+    const port = process.env.PORT || 5000;
 
     const options = new DocumentBuilder()
         .setTitle('API Music Service')
@@ -13,6 +17,6 @@ async function bootstrap() {
     const document = SwaggerModule.createDocument(app, options);
     SwaggerModule.setup('/', app, document);
 
-    await app.listen(5000);
+    await app.listen(port);
 }
 bootstrap();
