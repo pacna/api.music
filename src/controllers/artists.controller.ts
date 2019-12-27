@@ -3,13 +3,13 @@ import { Controller, Get } from '@nestjs/common';
 import { ApiTags, ApiResponse } from '@nestjs/swagger';
 
 // services
-import { ArtistsService } from 'src/services/artists.service';
+import { ArtistsService } from '../services/artists.service';
 
 // interfaces
-import { IArtists } from 'src/interfaces/artists.interface';
+import { IArtists } from '../interfaces/artists.interface';
 
 // models
-import { Artists } from 'src/swagger-models/artists.model';
+import { Artists } from '../swagger-models/artists.model';
 
 @Controller('artists')
 @ApiTags('artists')

@@ -11,7 +11,7 @@ async function bootstrap() {
 
     const options = new DocumentBuilder()
         .setTitle('API Music Service')
-        .setDescription('The backend for the React Music Player')
+        .setDescription('The backend for all current and future music players')
         .setVersion('1.0')
         .build();
     const document = SwaggerModule.createDocument(app, options);

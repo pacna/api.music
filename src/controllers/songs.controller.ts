@@ -3,16 +3,16 @@ import { Controller, Get, Put, Param, Body } from '@nestjs/common';
 import { ApiTags, ApiResponse, ApiParam, ApiBody } from '@nestjs/swagger';
 
 // services
-import { SongsService } from 'src/services/songs.service';
+import { SongsService } from '../services/songs.service';
 
 // interfaces
-import { ISongs } from 'src/interfaces/songs.interface';
-import { IFavorite } from 'src/interfaces/favorite.interface';
+import { ISongs } from '../interfaces/songs.interface';
+import { IFavorite } from '../interfaces/favorite.interface';
 
 // swagger models
-import { Songs } from 'src/swagger-models/songs.model';
-import { Favorite } from 'src/swagger-models/favorite.model';
-import { Message } from 'src/swagger-models/message.model';
+import { Songs } from '../swagger-models/songs.model';
+import { Favorite } from '../swagger-models/favorite.model';
+import { Message } from '../swagger-models/message.model';
 
 @Controller('songs')
 @ApiTags('songs')

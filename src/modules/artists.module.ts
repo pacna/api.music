@@ -3,13 +3,13 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
 // controllers
-import { ArtistsController } from 'src/controllers/artists.controller';
+import { ArtistsController } from '../controllers/artists.controller';
 
 // services
-import { ArtistsService } from 'src/services/artists.service';
+import { ArtistsService } from '../services/artists.service';
 
 // schemas
-import { ArtistsSchema } from 'src/schemas/artists.schema';
+import { ArtistsSchema } from '../schemas/artists.schema';
 
 
 @Module({

@@ -3,8 +3,8 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 
 // interfaces
-import { ISongs } from 'src/interfaces/songs.interface';
-import { IFavorite } from 'src/interfaces/favorite.interface';
+import { ISongs } from '../interfaces/songs.interface';
+import { IFavorite } from '../interfaces/favorite.interface';
 
 // others
 import { Model } from 'mongoose';

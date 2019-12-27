@@ -3,13 +3,13 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
 // controllers
-import { SongsController } from 'src/controllers/songs.controller';
+import { SongsController } from '../controllers/songs.controller';
 
 // services
-import { SongsService } from 'src/services/songs.service';
+import { SongsService } from '../services/songs.service';
 
 // schemas
-import { SongsSchema } from 'src/schemas/songs.schema';
+import { SongsSchema } from '../schemas/songs.schema';
 
 @Module({
   imports: [MongooseModule.forFeature([{name: 'Songs', schema: SongsSchema}])],

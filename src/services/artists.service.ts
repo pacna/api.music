@@ -3,7 +3,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 
 // interfaces
-import { IArtists } from 'src/interfaces/artists.interface';
+import { IArtists } from '../interfaces/artists.interface';
 
 // other
 import { Model } from 'mongoose';
