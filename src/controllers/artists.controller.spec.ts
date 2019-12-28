@@ -43,7 +43,7 @@ describe('ArtistsController', () => {
     artistsController = new ArtistsController(artistsService);
   });
 
-  describe('artists', () => {
+  describe('artists endpoint', () => {
     it('should retrieve artists', async () => {
         // ARRANGE
         const artistsMockService = new ArtistsMockService();
@@ -53,6 +53,7 @@ describe('ArtistsController', () => {
         const response = await artistsController.getArtists();
 
         // ASSERT
+        expect(response).toMatchSnapshot();
         expect(artistsService.getArtists).toBeCalled();
         expect(response).toBe(artistsMockResponse);
     });

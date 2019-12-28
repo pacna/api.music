@@ -53,7 +53,7 @@ describe('SongsController', () => {
     songsController = new SongsController(songsService);
   });
 
-  describe('songs', () => {
+  describe('songs endpoint', () => {
     it('should retrieve songs', async () => {
         // ARRANGE
         const songsMockService = new SongsMockService();
@@ -63,6 +63,7 @@ describe('SongsController', () => {
         const response = await songsController.getSongs();
 
         // ASSERT
+        expect(response).toMatchSnapshot();
         expect(songsService.getSongs).toBeCalled();
         expect(response).toBe(songsMockResponse);
     });
@@ -76,6 +77,7 @@ describe('SongsController', () => {
         const response = await songsController.getFavorites();
 
         // ASSERT
+        expect(response).toMatchSnapshot();
         expect(songsService.getFavorites).toHaveBeenCalled();
         expect(response[0].favorite).toBe(true);
     })
