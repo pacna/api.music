@@ -33,7 +33,7 @@ class ArtistsMockService {
     }
 }
 
-describe('SongssController', () => {
+describe('ArtistsController', () => {
   let artistsController: ArtistsController;
   let artistsService: ArtistsService;
   let artistsModel: Model<IArtists>
@@ -43,7 +43,7 @@ describe('SongssController', () => {
     artistsController = new ArtistsController(artistsService);
   });
 
-  describe('songs', () => {
+  describe('artists', () => {
     it('should retrieve artists', async () => {
         // ARRANGE
         const artistsMockService = new ArtistsMockService();

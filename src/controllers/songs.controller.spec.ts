@@ -43,7 +43,7 @@ class SongsMockService {
     }
 }
 
-describe('SongssController', () => {
+describe('SongsController', () => {
   let songsController: SongsController;
   let songsService: SongsService;
   let songsModel: Model<ISongs>
