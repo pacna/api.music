@@ -35,3 +35,6 @@ lerna-debug.log*
 
 # .env
 /.env
+
+# snapshots
+/src/controllers/__snapshots__
