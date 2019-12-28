@@ -10,7 +10,7 @@ async function bootstrap() {
     const port = process.env.PORT || 5000;
 
     const options = new DocumentBuilder()
-        .setTitle('API Music Service')
+        .setTitle('API Music')
         .setDescription('The backend for the React Music Player and future music players')
         .setVersion('1.0')
         .build();
