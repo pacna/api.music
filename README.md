@@ -1,24 +1,22 @@
-# API Music Service
+# API Music
 
 The backend for the React Music Player and future music players
 
-## Installation
+## Prerequisites
 
-```bash
-$ npm install
+* [docker](https://docs.docker.com/install/)
+* [docker-compose](https://docs.docker.com/compose/install/)
+
+## Environment variable
+
+```
+DATABASE= connectionstring
 ```
 
 ## Running the app
 
-```bash
-# development
-$ npm run start
-
-# watch mode
-$ npm run start:dev
-
-# production mode
-$ npm run start:prod
+```
+$ docker-compose up --build
 ```
 
 ## Test

@@ -1,0 +1,16 @@
+[
+    {
+        "artist": "",
+        "albums":[
+            {
+                "title": "",
+                "songs": [
+                    {
+                        "title": "horse",
+                        "path": "https://www.w3schools.com/tags/horse.mp3"
+                    }
+                ]
+            }
+        ]
+    }
+]
