@@ -11,8 +11,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 
 async function bootstrap() {
-    const app = await NestFactory.create(AppModule);
-    app.setGlobalPrefix('');
+    const app = await NestFactory.create(AppModule, {cors: true});
     const port = process.env.PORT || 5000;
 
     const options = new DocumentBuilder()
