@@ -9,7 +9,7 @@ import { SongsService } from '../services/songs.service';
 import { ISongs } from '../interfaces/songs.interface';
 import { IFavorite } from '../interfaces/favorite.interface';
 
-// swagger models
+// models
 import { Songs } from '../swagger-models/songs.model';
 import { Favorite } from '../swagger-models/favorite.model';
 import { Message } from '../swagger-models/message.model';

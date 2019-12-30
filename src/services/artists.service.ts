@@ -5,7 +5,7 @@ import { InjectModel } from '@nestjs/mongoose';
 // interfaces
 import { IArtists } from '../interfaces/artists.interface';
 
-// other
+// others
 import { Model } from 'mongoose';
 
 @Injectable()

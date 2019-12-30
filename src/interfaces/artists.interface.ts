@@ -1,5 +1,8 @@
+// interfaces
+import { ISongs } from './songs.interface';
+
+// others
 import { Document } from 'mongoose';
-import { ISongs } from './songs.interface'
 
 export interface IArtists extends Document {
     readonly artist: string;

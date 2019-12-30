@@ -1,4 +1,7 @@
+// @nestjs
 import { ApiProperty } from "@nestjs/swagger";
+
+// models
 import { Songs } from './songs.model'
 
 export class Albums {

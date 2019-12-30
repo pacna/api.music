@@ -1,3 +1,4 @@
+// others
 import { Document } from 'mongoose';
 
 export interface ISongs extends Document {
