@@ -13,10 +13,16 @@ The backend for the React Music Player and future music players
 DATABASE= connectionstring
 ```
 
-## Running the app
+## Running the app in docker
 
 ```
 $ docker-compose up --build
+```
+
+## Running the app locally
+
+```
+npm start
 ```
 
 ## Test
